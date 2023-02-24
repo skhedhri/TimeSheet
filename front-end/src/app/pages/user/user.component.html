@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Ajouter Timesheet</h5>
+      </div>
+      <div class="card-body">
+        <form #n="ngForm" (ngSubmit)="onSubmit(n.value)">
+          <div class="row">
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Nombre d'heures</label>
+                <input name="nbHeure" ngModel type="text" class="form-control" placeholder="Nombre d'heure" >
+              </div>
+            </div>
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Projet</label>
+                <select class="form-control">
+                  <option></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Utilisateur</label>
+                <select class="form-control">
+                  <option></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round">Ajouter</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

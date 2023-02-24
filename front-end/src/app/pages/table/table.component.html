@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"> TimeSheet List</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                idTimeSheet
+              </th>
+              <th>
+                Nombre d'heures
+              </th>
+              <th>
+                Projet
+              </th>
+              <th class="">
+                Utilisateur
+              </th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tc of timeSheets">
+                <td>{{tc.idTimesheet}}</td>
+                <td>{{tc.nbHeure}}</td>
+                <td>{{tc.FK_Project}}</td>
+                <td>{{tc.FK_utilisateur}}</td>
+                <td>
+                  <button class="btn btn-primary" type="button" (click)="edit(tc)">edit</button>
+                  <button class="btn btn-danger" type="button" (click)="delete(tc)">delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Modifier Timesheet</h5>
+      </div>
+      <div class="card-body">
+        <form #n="ngForm" (ngSubmit)="onSubmit(n.value)">
+          <div class="row">
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Id</label>
+                <input readonly [(ngModel)]="tc.idTimesheet" type="text" class="form-control" >
+              </div>
+            </div>
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Nombre d'heures</label>
+                <input [(ngModel)]="tc.nbHeure" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Projet</label>
+                <input [(ngModel)]="tc.FK_Project" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Utilisateur</label>
+                <input [(ngModel)]="tc.FK_utilisateur" type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+              <button type="submit" class="btn btn-primary btn-round">Modifier</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
